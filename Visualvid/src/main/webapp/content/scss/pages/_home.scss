@@ -1,0 +1,291 @@
+@import '../abstracts/variables';
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.app {
+  &-main {
+    margin: 30px 0;
+    &-wrapper {
+      position: relative;
+      padding-left: 330px;
+      @media only screen and (max-width: 800px) {
+        padding-left: 0;
+      }
+    }
+  }
+  &-videolist {
+    display: grid;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    @media only screen and (min-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (min-width: 1080px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media only screen and (min-width: 1500px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &-filterlist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    .card {
+      border: 0;
+      margin-bottom: 10px;
+      &-header {
+        padding: 0 0 10px;
+        background-color: transparent;
+      }
+      &-body {
+        padding: 0 0 0 35px;
+      }
+      &-list {
+        margin: 0;
+        li {
+          padding: 10px 10px 10px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+          &:last-child {
+            border-bottom: 0;
+          }
+          &.app {
+            &-cardlink {
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  &-card--bordered {
+    padding: 10px;
+    border: 1px solid $app-border-color;
+  }
+  &-default,
+  &-section {
+    padding: 55px 0;
+    &-top {
+      padding-top: 75px;
+    }
+    &__heading {
+      margin-bottom: 50px;
+      &.lg {
+        margin-bottom: 110px;
+      }
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 25px;
+        &.lg {
+          margin-bottom: 35px;
+        }
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      padding: 30px 0;
+    }
+  }
+  &-customize {
+    .app {
+      &-h2 {
+        margin-bottom: 15px;
+      }
+      &-p {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &-banner {
+    background: linear-gradient(to right, $app-secondary, $app-primary);
+    height: 100vh;
+    padding-top: 88px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      background: url(../../content/images/banner-bg.png) no-repeat right top;
+      background-size: contain;
+      padding-top: 88px;
+      background-position: 100% 100%;
+    }
+    h1,
+    h4 {
+      margin: 0 0 25px;
+    }
+    @media only screen and (max-width: 767px) {
+      height: calc(100vh + 100px);
+      padding-top: 120px;
+      background: linear-gradient(to bottom, $app-secondary, $app-primary);
+      text-align: center;
+      padding-bottom: 240px;
+      overflow: hidden;
+      &:before {
+        width: 100%;
+        transform: scale(1.4);
+        background-size: 100%;
+      }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      height: 500px;
+      padding-top: 44px;
+      background-size: cover;
+    }
+    @media only screen and (min-width: 991px) and (max-width: 1199px) {
+      height: 685px;
+      background-size: cover;
+      background-position: 0 0;
+    }
+  }
+  &-inner-sec {
+    width: 85%;
+    margin: 0 auto;
+  }
+  &-section {
+    &--light-bg {
+      background-color: $app-primary-light;
+    }
+    &--pricing {
+      .app {
+        &-section {
+          &__heading {
+            width: 80%;
+            margin-left: auto;
+            margin-top: 10%;
+            @media only screen and (max-width: 767px) {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+        &-img {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &-sociallist {
+    display: flex;
+    align-items: center;
+    margin: 25px 0 0 0;
+    li {
+      margin-right: 10px;
+    }
+    @media only screen and (max-width: 767px) {
+      justify-content: center;
+    }
+  }
+  &-footer {
+    &-contact {
+      width: 60%;
+      img {
+        margin-bottom: 20px;
+      }
+      .app-p {
+        font-size: 12px;
+        color: $app-secondary-font;
+      }
+      h6 {
+        margin-bottom: 35px;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      &-contact {
+        width: 100%;
+        text-align: center;
+      }
+      &-row {
+        flex-direction: column-reverse;
+      }
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 15px;
+      grid-column-gap: 15px;
+      h5 {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: $app-secondary;
+      }
+      ul {
+        margin: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: $app-secondary-font;
+      }
+      a {
+        color: $app-secondary-font;
+      }
+      @media only screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-mobile-dropdown {
+    width: 85%;
+    margin: 20px auto 50px;
+    .dropdown-menu {
+      width: 100%;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media only screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  .line {
+    width: 25px;
+    height: 2px;
+    background-color: $app-secondary;
+    display: block;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.is-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+    .line {
+      &:nth-child(2) {
+        width: 0px;
+      }
+      &:nth-child(1),
+      &:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(1) {
+        transform: translateY(6px);
+      }
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(90deg);
+      }
+    }
+  }
+  @media (min-width: 991px) {
+    display: none;
+  }
+}

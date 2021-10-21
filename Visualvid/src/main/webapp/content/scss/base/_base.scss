@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+//  base import
+@import 'fonts', 'helpers', 'typography', '../abstracts/variables';
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+body {
+  background-color: $app-lightgrey;
+}

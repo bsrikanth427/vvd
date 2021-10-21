@@ -1,0 +1,1 @@
+ALTER TABLE favourite_medias ADD COLUMN slide_name VARCHAR(100);

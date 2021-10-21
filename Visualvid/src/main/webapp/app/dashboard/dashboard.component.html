@@ -1,0 +1,43 @@
+<section class="app-admin">
+    
+        <jhi-dashboard-navigator></jhi-dashboard-navigator>
+      
+        <jhi-dashboard-main class="flex-fill"></jhi-dashboard-main>
+    
+       <!-- <jhi-dashboard-overview></jhi-dashboard-overview>  -->
+     <ng-container *ngIf="showOverview">
+             <jhi-dashboard-overview></jhi-dashboard-overview>
+    </ng-container>
+    <ng-container *ngIf="!showOverview">
+        <div class="overview-btn btn btn-primary" (click)="showOverviewTab('true')">overview</div>
+    </ng-container>
+
+</section> 
+
+<!-- ============================================================================================= -->
+
+
+<!-- <div>
+    <div class="rounded dashboard shadow" style="position: relative">
+       <div class="row" style="">
+
+         <div class="col-lg-2 bg-v-dark-blue text-color left" style="font-size: small;">
+             <jhi-dashboard-navigator></jhi-dashboard-navigator>
+         </div>
+
+          <div class="col-lg main-panel mt-3">
+                <jhi-dashboard-main></jhi-dashboard-main>
+         </div>
+
+         <ng-container *ngIf="showOverview">
+             <div class="col-lg-3 right shadow">
+                 <jhi-dashboard-overview></jhi-dashboard-overview>
+             </div>
+         </ng-container> 
+          <ng-container *ngIf="!showOverview">
+               <div class="overview-btn btn btn-primary" (click)="showOverviewTab('true')">overview</div>
+           </ng-container>
+
+       </div>
+    </div>
+</div> -->

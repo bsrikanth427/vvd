@@ -1,0 +1,123 @@
+<div class="app-admin__right">
+    <div class="material-icons minimize-icon" (click)="hideOverview()">close</div>
+<ul class="app-admin__headermenu list-unstyled">
+    <li class="dropdown">
+        <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="app-icon icon-more"></span></a>
+        <div class="dropdown-menu dropdown-menu--left" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+    </li>
+    <li>
+        <a href="#" class="app-notification"><span class="app-icon icon-notification"></span></a>
+    </li>
+    <li class="dropdown" *jhiHasAnyAuthority="'ADMIN_USER'">
+        <a href="#" class="app-admin__profile dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./../../../content/images/Quality videos and support.svg" alt=""></a>
+        <div class="dropdown-menu dropdown-menu--left" aria-labelledby="dropdownMenuButton">
+        <ul>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="dashboard/orders" routerLinkActive="active">Dashboard</a>
+            </li>
+            <li>
+            <a class="dropdown-item" href="#" routerLink="admin/user-management" routerLinkActive="active">User management</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/metrics" routerLinkActive="active">Metrics</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/health" routerLinkActive="active">Health</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/configuration" routerLinkActive="active">Configuration</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/audits" routerLinkActive="active">Audits</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/logs" routerLinkActive="active">Logs</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#" routerLink="admin/docs" routerLinkActive="active">API</a>
+            </li>
+            <li *ngIf="!inProduction">
+                <a class="dropdown-item" href='./h2-console' target="_tab">Database</a>
+            </li>
+           </ul>
+        </div>
+    </li>
+</ul>
+<div class="app-admin__rightscroll">
+    <p class="text-bold app-admin__rightscroll-head">Top Sellers</p>
+    <ul class="list-unstyled app-admin__rightmenulist">
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-primary">25852</span>
+        </li>
+        <li>
+            <span>Corporate Presenation</span>
+            <span class="text-primary">25852</span>
+        </li>
+        <li>
+            <span>Wedding Invitaion</span>
+            <span class="text-primary">25852</span>
+        </li>
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-primary">25852</span>
+        </li>
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-primary">25852</span>
+        </li>
+    </ul>
+
+    <p class="text-bold app-admin__rightscroll-head">Top Earnings</p>
+    <ul class="list-unstyled app-admin__rightmenulist">
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-success">25852</span>
+        </li>
+        <li>
+            <span>Corporate Presenation</span>
+            <span class="text-success">25852</span>
+        </li>
+        <li>
+            <span>Wedding Invitaion</span>
+            <span class="text-success">25852</span>
+        </li>
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-success">25852</span>
+        </li>
+        <li>
+            <span>Restaurant Promo</span>
+            <span class="text-success">25852</span>
+        </li>
+    </ul>
+    
+        <p class="text-bold app-admin__rightscroll-head">Most Views</p>
+        <ul class="list-unstyled app-admin__rightmenulist">
+            <li>
+                <span>Restaurant Promo</span>
+                <span class="text-secondary">25852</span>
+            </li>
+            <li>
+                <span>Corporate Presenation</span>
+                <span class="text-secondary">25852</span>
+            </li>
+            <li>
+                <span>Wedding Invitaion</span>
+                <span class="text-secondary">25852</span>
+            </li>
+            <li>
+                <span>Restaurant Promo</span>
+                <span class="text-secondary">25852</span>
+            </li>
+            <li>
+                <span>Restaurant Promo</span>
+                <span class="text-secondary">25852</span>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+<section class="app-cart app-cart--checkout">
+    <div class="container">
+      <div class="app-admin__titleicon mb-4">
+        <span class="app-icon icon-security"></span>
+        <span>Secure Checkout</span>
+    </div>
+        <div class="app-cart-wrapper row">
+          <div class="col-sm-12 col-md-12 col-lg-8">
+            <div class="app-cart__left">
+              
+              <div class="app-cart__body app-card box-shadow">
+                <p class="app-billing-head text-dark fw-600">Billing Details <a href="#" class="edit">Edit</a></p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <p class="app-billing-address">Anil Kumar bobba
+                      H.no. 1-9-35/48/53/6/11, Padmavathi Nagar,
+                      Khammam, Telangana, 507003
+                      India</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="app-billing-gstin">GSTIN</p>
+                    <p class="app-billing-gstin-no">1253654896</p>
+                  </div>
+                </div>
+              </div>
+              <div class="app-cart__body app-card box-shadow">
+                <p class="app-billing-head app-billing-head text-dark fw-600">Payment Method
+                </p>
+                <ul class="list-unstyled app-paymentoption">
+                  <li>
+                    <input type="radio" id="f-option" name="selector">
+                    <label for="f-option"><span>Credit Card or Debit card</span></label>
+                    
+                    <div class="check"></div>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="s-option" name="selector">
+                    <label for="s-option">Bacon</label>
+                    
+                    <div class="check"><div class="inside"></div></div>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="t-option" name="selector">
+                    <label for="t-option">Net Banking</label>
+                    
+                    <div class="check"><div class="inside"></div></div>
+                  </li>
+                  <li>
+                    <input type="radio" id="u-option" name="selector">
+                    <label for="u-option">Other UPI Apps</label>
+                    
+                    <div class="check"><div class="inside"></div></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="app-cart__right">
+             
+              <div class="app-card box-shadow">
+                <p class="app-billing-head text-dark fw-600">Order Summary</p>
+                <ul class="list-unstyled app-summarylist">
+                  <li>
+                    <div>
+                      <p>Christmas Greetings</p>
+                      <p class="summary-sub"><span class="app-icon icon-plus"></span><span>Premium Deliver</span></p>
+                      <p class="summary-sub"><span class="app-icon icon-plus"></span><span>Advanced customization</span></p>
+                    </div>
+                    <span class="price">$39</span>
+                  </li>
+                  <li>
+                    <div>
+                      <p>Corporate slideshow</p>
+                    </div>
+                    <span class="price">$39</span>
+                  </li>
+                  <li>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Discount code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">Apply</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <p>Subtotal</p>
+                    </div>
+                    <span class="price">{{basicAmount}}</span>
+                  </li>
+                  <li>
+                    <div>
+                      <p>Discount</p>
+                    </div>
+                    <span class="price">{{discountAmount}}</span>
+                  </li>
+                  <li>
+                    <div>
+                      <p>Taxes ({{pricing.gstPercentage}})</p>
+                    </div>
+                    <span class="price">{{gstAmount}}</span>
+                  </li>
+                  <li>
+                    <div>
+                      <p>Gateway Charges</p>
+                    </div>
+                    <span class="price">$39</span>
+                  </li>
+                  <li class="total">
+                    <div>
+                      <p>Total</p>
+                    </div>
+                    <span class="price">{{totalAmount}}</span>
+                  </li>
+                </ul>
+                <div class="btn-block m-0">
+                  <button class="btn btn-md btn-block m-0 btn-primary" (click)="buyNow()">Checkout </button>
+                </div>
+              </div>
+              <p class="text-cart-extra text-center"><span class="app-icon icon-security mr-2"></span><span>Secured Payments</span></p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+</section>

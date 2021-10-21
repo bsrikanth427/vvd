@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../icons/icomoon.eot?fzaxmo');
+  src: url('../icons/icomoon.eot?fzaxmo#iefix') format('embedded-opentype'), url('../icons/icomoon.ttf?fzaxmo') format('truetype'),
+    url('../icons/icomoon.woff?fzaxmo') format('woff'), url('../icons/icomoon.svg?fzaxmo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-notification:before {
+  content: '\e914';
+}
+.icon-orders:before {
+  content: '\e908';
+}
+.icon-support:before {
+  content: '\e909';
+}
+.icon-assignments:before {
+  content: '\e90a';
+}
+.icon-video:before {
+  content: '\e90b';
+}
+.icon-message:before {
+  content: '\e90c';
+}
+.icon-dashboard:before {
+  content: '\e90d';
+}
+.icon-sales:before {
+  content: '\e90e';
+}
+.icon-subscription:before {
+  content: '\e90f';
+}
+.icon-setting:before {
+  content: '\e910';
+}
+.icon-plus:before {
+  content: '\e911';
+}
+.icon-more:before {
+  content: '\e912';
+}
+.icon-more-2:before {
+  content: '\e913';
+}
+.icon-user:before {
+  content: '\e907';
+}
+.icon-close:before {
+  content: '\e906';
+}
+.icon-shopping-cart:before {
+  content: '\e903';
+}
+.icon-like:before {
+  content: '\e904';
+}
+.icon-search:before {
+  content: '\e905';
+}
+.icon-down-arrow:before {
+  content: '\e902';
+}
+.icon-download:before {
+  content: '\e900';
+}
+.icon-passion:before {
+  content: '\e901';
+}

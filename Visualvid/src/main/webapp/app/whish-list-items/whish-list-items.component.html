@@ -1,0 +1,129 @@
+<!-- <section class="app-cart">
+    <div class="container">
+       <div class="app-cart-wrapper row">
+          <div class="col-sm-12 col-md-12 col-lg-9">
+             <div class="app-cart__left">
+                <div fxLayout="column" fxLayoutAlign="space-around center" *ngIf="!wishlistItems.length">
+                   <mat-chip-list>
+                      <mat-chip color="warn" selected="true">YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</mat-chip>
+                   </mat-chip-list>
+                </div>
+                <div class="app-cart__header">
+                   <div class="row">
+                      <div class="col-sm-6 btn-block">
+                         <button class="btn btn-default" routerLink="/videos" routerLinkActive="active-navitem">Continue Shopping</button>
+                      </div>
+                   </div>
+                </div>
+
+        <mat-card *ngIf="wishlistItems.length" class="p-0">
+            <div class="mat-table cart-table">
+                <div class="mat-header-row">
+                    <div class="mat-header-cell">Product</div>
+                    <div class="mat-header-cell">Name</div>
+                    <div class="mat-header-cell">Price</div>
+                    <div class="mat-header-cell text-center">
+                        <div class="px-1">
+                            <button mat-raised-button color="warn">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let item of wishlistItems" class="mat-row">
+                    <div class="mat-cell">
+                        <img src="{{item.thumbNailS3Url}}" alt="" width="200" class="featured-image">
+                        <jhi-list-videos-item [item]="item"></jhi-list-videos-item>  
+                    </div>
+                    <div class="mat-cell"><a [routerLink]="['/home/product', item.id]"
+                            class="product-name">{{item.name}}</a></div>
+                    <div class="mat-cell price">{{item.indianPrice}}</div>
+                    <div class="mat-cell text-center">
+                        <svg-icon name="cart" placement="right"></svg-icon>
+                        <svg-icon name="delete_outline" placement="right"></svg-icon>
+                    </div>
+                </div>
+                <div class="mat-row">
+                    <div class="mat-cell"><a [routerLink]="['/home/one']">Continue shopping</a></div>
+                    <div class="mat-cell"></div>
+                    <div class="mat-cell"></div>
+                    <div class="mat-cell text-center">
+                        <a [routerLink]="['/pages/checkout']">
+                            Proceed To Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div> -->
+
+
+
+<!-- ======================================================================================= -->
+
+
+
+<section class="app-cart">
+    <div class="container">
+       <div class="app-cart-wrapper row">
+          <div class="col-sm-12 col-md-12 col-lg-9">
+             <div class="app-cart__left">
+                <div fxLayout="column" fxLayoutAlign="space-around center" *ngIf="!wishlistItems.length">
+                   <mat-chip-list>
+                      <mat-chip color="warn" selected="true">YOU HAVE NO ITEMS IN YOUR WHISH LIST.</mat-chip>
+                   </mat-chip-list>
+                </div>
+                <div class="app-cart__header">
+                   <div class="row">
+                      <div class="col-sm-6 btn-block">
+                         <button class="btn btn-default" routerLink="/videos" routerLinkActive="active-navitem">Continue Shopping</button>
+                      </div>
+                   </div>
+                </div>
+             <mat-card *ngIf="wishlistItems.length > 0" class="app-cart__body app-card box-shadow">
+                <ul class="list-unstyled app-cart__list">
+                   <li *ngFor="let item of wishlistItems; let i = index">
+                      <span class="app-icon icon-close" (click)="removeItem(item)"></span>
+                      <div class="img-block">
+                         <img src="{{item.thumbNailS3Url}}" alt="">
+                      </div>
+                      <div class="list-content">
+                         <p class="list-heading">{{item.name}}</p>
+                         <p>Christmas Greetings</p>
+                         <div class="list-quantity">
+                            <!-- <select name="" id="">
+                   <option value="">qty: 1</option>
+                   </select> -->
+                            <p class="m-0 price"><sup>$</sup> <span>{{item.indianPrice}}</span></p>
+                            <div class="mat-cell text-center">
+                                <svg-icon name="cart" placement="right" (click)="addToCart(item)"></svg-icon>
+                            </div>
+                         </div>
+                      </div>
+                   </li>
+                </ul>
+                <!-- <div class="app-cart__footer">
+                   <button class="btn btn-primary" [routerLink]="['/pages/checkout']">Proceed to Checkout</button>
+                </div> -->
+                </mat-card>
+             </div>
+          </div>
+ 
+                <!-- <div class="col-sm-12 col-md-12 col-lg-3">
+                   <div class="app-cart__right">
+                      <div class="app-card box-shadow">
+                         <p class="cart-total">Cart Total</p>
+                         <p class="price"><sup>$</sup><span>138</span></p>
+                         <div class="btn-block">
+                            <button class="btn btn-block btn-primary">Secure Checkout </button>
+                         </div>
+                         <p class="m-0 sub">Prices shown above exlucing taxes</p>
+                      </div>
+                      <p class="text-cart-extra" (click)="buyNow()"><span
+                            class="app-icon icon-security"></span><span>Secured Payments</span></p>
+                   </div>
+                </div> -->
+             </mat-card>
+           </div>
+       </div>
+ </section>

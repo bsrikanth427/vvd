@@ -1,0 +1,121 @@
+@import '../abstracts/variables';
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/*------------------------------------*\
+  =FONT WEIGHTS
+\*------------------------------------*/
+
+$fontWeights: (400, 500, 600, 700);
+
+@each $fontWeight in $fontWeights {
+  .fw-#{$fontWeight} {
+    font-weight: $fontWeight !important;
+  }
+}
+
+/*------------------------------------*\
+  =MOUSE CURSORS
+\*------------------------------------*/
+
+.m-pointer {
+  cursor: pointer !important;
+}
+
+/*------------------------------------*\
+  =BORDERS
+\*------------------------------------*/
+
+.border {
+  border: 1px solid $app-border-color !important;
+}
+
+/*------------------------------------*\
+  =LAYOUTS
+\*------------------------------------*/
+.d-flex {
+  display: flex !important;
+}
+
+.flex {
+  &-column {
+    flex-direction: column !important;
+  }
+
+  &-fill {
+    flex: 1 1 auto !important;
+  }
+
+  &-wrap {
+    flex-wrap: wrap !important;
+  }
+}
+
+.justify-content {
+  &-end {
+    justify-content: flex-end !important;
+  }
+
+  &-center {
+    justify-content: center !important;
+  }
+
+  &-between {
+    justify-content: space-between !important;
+  }
+}
+
+.align-items {
+  &-end {
+    align-items: flex-end !important;
+  }
+
+  &-center {
+    align-items: center !important;
+  }
+
+  &-stretch {
+    align-items: stretch !important;
+  }
+}
+
+/*------------------------------------*\
+=TEXT TRANSFORMATIONS
+\*------------------------------------*/
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+/*------------------------------------*\
+=TEXT TRUNCATION
+\*------------------------------------*/
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*------------------------------------*\
+=abolute positions
+\*------------------------------------*/
+.absolute {
+  &-center {
+    @include absoluteposition(both);
+  }
+}
+
+.box {
+  &-shadow {
+    box-shadow: 0 4px 6px -1px rgba($app-secondary, 0.1), 0 2px 4px -1px rgba($app-secondary, 0.06) !important;
+  }
+}

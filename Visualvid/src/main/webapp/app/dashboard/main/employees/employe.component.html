@@ -1,0 +1,106 @@
+<!-- <div>
+    <div class="row mt-4">
+       <div class="col-lg-4">
+           <h5 style="font-weight: bold;">Employees</h5>
+        </div> 
+        <div class="col-lg-4">
+         </div> 
+         <div class="col-lg-4">
+            <input type="text" class="form-control search" id="search" placeholder="search...">
+         </div> 
+     </div>
+     <div class="row mt-4">
+        <div class="col-lg-4">
+            <select class="form-control" id="sel1">
+                <option>Design Team</option>
+                <option>Marketing Team</option>
+                <option>Finance Team</option>
+                <option>HR Team</option>
+              </select>
+         </div> 
+         <div class="col-lg-4">
+            <a class="btn btn-primary btn-new ml-n2" (click)="addNew()">
+                <span style="font-size: x-small;">+ Add New</span>
+            </a>
+          </div> 
+          <div class="col-lg-4">
+          </div> 
+      </div>
+
+      <div class="row mt-4">
+			<div class="col-lg-4 col-sm-12 mt-2" *ngFor="let emp of employees; let i=index;">
+				<div class="card-deck">
+					<div class="card card-employee">
+						<div class="card-body">
+                                <img class="employee-profile" src="https://visualvid.s3.ap-south-1.amazonaws.com/adminuploads/4b97f6d0-bf6e-475c-9785-cbcb1e596d4d_Thumbnail_04.png"/>
+							    <small class="row ml-1" style="font-weight: bolder; color: #43497b;">{{emp.firstName}}</small>
+								<small class="row ml-1"  style="font-size: x-small;">{{emp.email}}</small>
+								<small class="row ml-1"  style="font-size: x-small;">{{emp.phone}}</small>
+								<div class="row employee-role mt-2 ml-1">
+									<small style="font-size: x-small; font-weight: bold;">{{emp.role}}</small>
+								</div>
+						</div>
+					</div>
+				</div>
+            </div>
+      </div>
+</div> -->
+
+
+
+<!-- =================================================================================== -->
+
+
+
+<p class="d-flex"><span class="text-secondary text-light mr-2">Hi There,</span> <span class="app-h3">Bobba Anil Kumar</span></p>
+<div class="app-admin__title mb-3">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="app-admin__titleicon text-bold">
+                <span class="app-icon icon-assignments"></span>
+                <span>Employees</span>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="app-search">
+                <a class="" href="#"><span class="app-icon icon-search"></span></a>
+                <input type="text" class="form-control" name="" id="" placeholder="Search...">
+                
+              </div>
+        </div>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col-sm-8">
+        <div class="app-admin__searchbtn d-flex align-items-center">
+            <div class="form-group m-0">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Select Item</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-primary btn-md ml-3 text-light" (click)="addNew()"><span class="app-icon icon-plus mr-2"></span><span>Add New</span></button>
+        </div>
+    </div>
+</div>
+<div class="app-cardlist app-cardlist--admin">
+
+    <div class="app-card app-card--employee box-shadow" *ngFor="let emp of employees; let i=index;">
+        <div class="dropdown">
+            <a href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="app-icon icon-more"></span></a>
+        </div>
+        
+        <div class="app-profile">
+            <img  src="https://visualvid.s3.ap-south-1.amazonaws.com/adminuploads/4b97f6d0-bf6e-475c-9785-cbcb1e596d4d_Thumbnail_04.png"/>
+        </div>
+        <p class="app-title">{{emp.firstName}}</p>
+        <p class="app-email">{{emp.email}}</p>
+        <p class="app-mobile">{{emp.phone}}</p>
+        <a href="#" class="app-card-btnbottom">{{emp.role}}</a>
+    </div>
+   
+</div>

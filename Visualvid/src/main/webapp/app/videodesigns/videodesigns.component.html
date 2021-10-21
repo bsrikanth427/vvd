@@ -1,0 +1,61 @@
+<section class="app-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="app-h2 text-primary text-bold">Find what suits you best</h2>
+      </div>
+
+
+<div class="app-tabs">
+    <div class="dropdown app-mobile-dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          All Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+          <div *ngFor="let c of categories">
+              <a class="dropdown-item"  data-toggle="tab" href="#" role="tab" (click)="filterByCategories(c)">{{c.name}}</a>
+            </div>
+      </div>
+   </div>
+
+   <div class="app-videolist" id="videodesigns">
+      <div *ngFor="let item of list" class="app-card app-card--video-sm box-shadow">
+          <jhi-videoitem [item]="item"></jhi-videoitem>
+          <div class="app-content">
+              <div class="app-heading">
+                  <p class="app-p">{{item.name}}</p>
+                  <p class="app-sm-text">Special Events</p>
+              </div>
+              <div class="flex-fill align-items-center d-flex">
+                  <p class="app-h4">${{item.indianPrice}}</p>
+              </div>
+              <div class="app-iconbox">
+                  <span class="app-icon app-h3 text-success icon-shopping-cart m-pointer" ></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <ul ngbNav #nav="ngbNav" [(activeId)]="activeId" class="nav nav-tabs">
+        <ng-container  *ngFor="let c of categories">
+            <ng-container ngbNavItem >
+                <li class="nav-item">
+                    <a ngbNavLink class="nav-link">
+                        <div class="tab-title" [innerHtml]="c.nameFormatted"></div>
+                    </a>
+                </li>
+                <ng-template ngbNavContent>
+                    <jhi-videolisting [category]="c"></jhi-videolisting>
+                </ng-template>
+            </ng-container>
+        </ng-container>
+      </ul>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>
+
+<div class="text-center" >
+    <button class="btn btn-primary btn-md" [routerLink] = "['/videos']" routerLinkActive="active">View All</button>
+  </div>
+
+</div>
+</section>
+

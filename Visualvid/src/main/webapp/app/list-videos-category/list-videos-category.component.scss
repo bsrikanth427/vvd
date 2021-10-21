@@ -1,0 +1,43 @@
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mat-expansion-panel-header {
+  padding: 10px 15px 10px 0 !important;
+  height: auto !important;
+}
+.mat-expansion-panel {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+.mat-action-row {
+  justify-content: flex-start !important;
+  padding: 10px 8px 10px 24px !important;
+}
+.mat-expansion-panel-body {
+  display: none !important;
+}
+.btn {
+  &-group {
+    margin: 30px 0;
+    border: 1px solid #828599;
+    border-radius: 4px;
+    .btn {
+      border-right: 1px solid #828599;
+      &:last-child {
+        border-right: 0;
+      }
+      &:focus {
+        background-color: #7175d8;
+        color: #ffffff;
+      }
+    }
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+      margin-left: 0 !important;
+    }
+  }
+}

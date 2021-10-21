@@ -1,0 +1,45 @@
+/* after changing this file run 'npm run webpack:build' */
+
+/***************************
+put Sass variables here:
+eg $input-color: red;
+****************************/
+// Override Bootstrap variables
+@import 'bootstrap-variables';
+@import '~primeng/resources/themes/saga-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+// Import Bootstrap source files from node_modules
+@import '~bootstrap/scss/bootstrap';
+
+@import '~quill/dist/quill.snow.css';
+@import '~video.js/dist/video-js.css';
+.material-icons {
+  vertical-align: top;
+}
+.popover {
+  border-radius: 0.25rem !important;
+}
+.img-thumbnail{
+  padding: 0.5rem!important;
+}
+strong {
+  font-weight: bold !important;
+}
+.text-muted {
+    color: #AAABB3 !important;
+}
+.vjs-control-bar {
+  visibility: hidden !important;
+}
+.vjs-paused .vjs-big-play-button {
+   display: none;
+}
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+   display: block;
+}
+/* jhipster-needle-scss-add-vendor JHipster will add new css style */

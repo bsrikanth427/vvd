@@ -1,0 +1,35 @@
+.app-signup {
+  padding: 130px 0 40px 0;
+  background-color: #828599;
+}
+.app-signup .app-loginwrap {
+  position: relative;
+}
+.app-signup .app-loginwrap:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% - 30%);
+  height: 100%;
+  background: url(../../../content/images/banner-bg.png);
+  background-position: 0 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.app-signup .app-logintext {
+  background: linear-gradient(to right, #7175d8, #43497b);
+}
+@media (max-width: 768px) {
+  .app-signup {
+    padding: 58px 0 0 0;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .app-signup .app-loginwrap {
+    width: 100%;
+  }
+  .app-signup .app-loginwrap:after {
+    display: none;
+  }
+}

@@ -1,0 +1,128 @@
+<!-- <div>
+    <div class="row mt-4">
+       <h5 style="font-weight: bold;">Subscriptions</h5>
+       <div class="col">
+        <a class="ml-2 btn btn-primary btn-new" (click)="addNew()">
+            <span style="font-size: x-small;">+ Add New</span>
+        </a>
+      </div>
+        <div class="row no-gutters mt-4">
+            <h5 style="font-weight: bold;" class="mr-auto">Orders</h5>
+            <jhi-search (searchEvent)="search($event)"></jhi-search>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="card" style="width: 8rem;height: 6rem;">
+            <div class="card-body" style="color:#7175d8;">
+                <div style="padding-left: 0.2rem;margin-top: 0.5rem;font-size: x-small;
+                font-weight: bold;">SUBSCRIPTION MODELS</div>
+              <a class="stretched-link" (click)="enableSubscription(true,'')"></a>
+            </div>
+            <div class="card-footer" *ngIf="showSubscriptionModels"></div>
+        </div>
+
+        <div class="card" style="width: 8rem;height: 6rem;margin-left: 1rem;">
+            <div class="card-body">
+                <div style="margin-left: -0.5rem;font-size: x-small;">Active Subscriptions</div>
+                <div class="card-box-metrics">580</div>
+                <a class="stretched-link" (click)="enableSubscription(false,'active')"></a>
+            </div>
+            <ng-container *ngIf="status==='Active'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+
+        <div class="card" style="width: 8rem;height: 6rem;margin-left: 1rem;">
+            <div class="card-body">
+                <div style="margin-left:-0.5rem;font-size:x-small;">InActive Subscriptions</div>
+                <div class="card-box-metrics">390</div>
+                <a class="stretched-link" (click)="enableSubscription(false,'inactive')"></a>
+            </div>
+            <ng-container *ngIf="status==='InActive'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+
+        <div class="card" style="width: 8rem;height: 6rem;margin-left: 1rem;">
+            <div class="card-body">
+                <div style="margin-left:-0.5rem;font-size:x-small;">Cancelled Subscriptions</div>
+                <div class="card-box-metrics">120</div>
+                <a class="stretched-link" (click)="enableSubscription(false,'cancelled')"></a>
+            </div>
+            <ng-container *ngIf="status==='Cancelled'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+    </div>
+    
+    <div class="pt-4">
+        <ng-container *ngIf="showSubscriptionModels">
+            <jhi-base-subscriptions-table #baseSubscriptionsTable [searchText]="searchText"></jhi-base-subscriptions-table>
+        </ng-container>
+        <ng-container *ngIf="!showSubscriptionModels">
+            <jhi-user-subscriptions-table #userSubscriptionsTable [status]="status" [searchText]="searchText"></jhi-user-subscriptions-table>>
+        </ng-container>
+</div>
+</div> -->
+
+<!-- ======================================================================================= -->
+
+<div class="app-admin__main">
+    <p class="d-flex"><span class="text-secondary text-light mr-2">Hi There,</span> <span class="app-h3">Bobba Anil Kumar</span></p>
+    <div class="app-admin__title">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="app-admin__titleicon text-bold">
+                    <span class="app-icon icon-subscription"></span>
+                    <span>Subscriptions</span>
+                    <button class="btn btn-primary ml-3 text-light" (click)="addNew()"><span class="app-icon icon-plus"></span><span>New Subscription</span></button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="app-search">
+                    <a class="" href="#"><span class="app-icon icon-search"></span></a>
+                    <input type="text" class="form-control" name="" id="" placeholder="Search...">
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-cardlist app-cardlist--admin">
+        <div class="app-card active app-card--flex">
+            <p class="app-text-p">SUBSCRIPTION  MODELS </p>
+        </div>
+        <div class="app-card">
+            <p>Active Subscriptions</p>
+            <p class="app-number">1200</p>
+            <a class="stretched-link" (click)="enableSubscription(false,'active')"></a>
+            <ng-container *ngIf="status==='Active'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+        <div class="app-card">
+            <p>InActive Subscriptions</p>
+            <p class="app-number">1200</p>
+            <a class="stretched-link" (click)="enableSubscription(false,'inactive')"></a>
+            <ng-container *ngIf="status==='InActive'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+        <div class="app-card">
+            <p>Cancelled Subscriptions</p>
+            <p class="app-number">1200</p>
+            <a class="stretched-link" (click)="enableSubscription(false,'cancelled')"></a>
+            <ng-container *ngIf="status==='Cancelled'">
+                <div class="card-footer"></div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="app-tablewrap">
+        <div class="app-tableheader">
+            <ng-container *ngIf="showSubscriptionModels">
+                <jhi-base-subscriptions-table #baseSubscriptionsTable [searchText]="searchText"></jhi-base-subscriptions-table>
+            </ng-container>
+            <ng-container *ngIf="!showSubscriptionModels">
+                <jhi-user-subscriptions-table #userSubscriptionsTable [status]="status" [searchText]="searchText"></jhi-user-subscriptions-table>>
+            </ng-container>
+        </div>   
+    </div>
+</div>

@@ -1,0 +1,184 @@
+<section class="app-home" >
+<nav id="navbarResponsive" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid app-mobile-view">
+      <div class="hamburger" id="homeMenu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <a class="navbar-brand" href="#"><img src="../../../content/images/logo.png" alt="" /></a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link" href="#videodesigns">Video Designs <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link"  href="#howitworks" >How It Works</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link" href="#contactUs">Contact us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav ml-auto navbar-nav-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="app-icon icon-search"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/wishList']" routerLinkActive="router-link-active"><span class="app-icon icon-like"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/cart']" routerLinkActive="router-link-active"><span class="app-icon icon-shopping-cart"  ></span></a>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="navbar-right" [ngSwitch]="isAuthenticated()">
+        <div class="nav-item dropdown" *ngSwitchCase="true">
+          <a class="nav-link nav-user dropdown-toggle app-icon icon-user app-menu-user m-pointer" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="app-icon icon-user app-menu-user m-pointer"></span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Account</a>
+            <a class="dropdown-item" href="#">Upgrade</a>
+            <a class="dropdown-item" href="#">Purchases</a>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" (click)="logout()">Sign Out</a>
+          </div>
+        </div>
+        <button *ngSwitchCase="false" (click)="loginPopup()" class="btn btn-link my-2 " type="submit">Sign In</button>
+        <!-- <button *ngSwitchCase="false" (click)="loginPopup()"  class="btn btn-link my-2 " data-toggle="modal" data-target="#LoginModal" >Sign In</button> -->
+        <!-- <button class="btn btn-primary my-2" type="submit">Get Started</button> -->
+        <!-- <span *ngSwitchCase="true" class="app-icon icon-user app-menu-user m-pointer">
+
+          
+        </span> -->
+        <div class="hamburger d-none" id="profileMenu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="app-mobile-menu" id="mobileProfileMenu">
+        <div class="app-mobile-menu__header">
+          <span class="app-icon icon-user"></span>
+          <span>Anil Kumar</span>
+          <span class="app-icon icon-shopping-cart"></span>
+        </div>
+        <div class="app-mobile-menu__content">
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">My Account</a>
+            </li>
+            <li>
+              <a href="#">Purchases</a>
+            </li>
+            <li>
+              <a href="#">Favorites</a>
+            </li>
+            <li>
+              <a href="#">Upgrade subscription</a>
+            </li>
+          </ul>
+        </div>
+        <div class="app-mobile-menu__footer">
+          <button class="btn btn-link">Sign Out</button>
+        </div>
+      </div>
+
+      <div class="app-mobile-menu" id="mobilecommonMenu">
+        <div class="app-mobile-menu__header light">
+          <div class="app-searchbox">
+            <input type="text" class="form-control" name="" id="">
+            <a class="" href="#"><span class="app-icon icon-search"></span></a>
+          </div>
+        </div>
+        <div class="app-mobile-menu__content">
+          <ul class="list-unstyled app-commonmenu">
+            <li>
+              <a href="#videodesigns">Video Design</a>
+            </li>
+            <li>
+              <a href="#howitworks">How It Works</a>
+            </li>
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+            <li>
+              <a routerLink="/">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</nav>
+</section>
+
+
+
+
+<!-- Login Modal -->
+<div [hidden]="loginModal" class="modal fade modal-login"  id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="app-loginwrap">
+          <div class="app-logintext">
+            <img src="../../../content/images/logo.png" alt="">
+            <p class="app-p">Thanks for getting back to visualvid. lets access to our best
+              recommendations for You</p>
+              <span class="app-icon icon-close m-pointer" data-dismiss="modal"></span>
+          </div>
+          <div class="app-loginblock">
+            <!-- <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="activeModal.dismiss('closed')">
+              <span aria-hidden="true">x</span>
+          </button> -->
+            <div class="text-center app-section__heading">
+              <h2 class="app-h2 text-primary text-bold">Welcome back !</h2>
+              <p class="app-p">Log in to your account</p>
+            </div>
+
+            <div *ngIf="authenticationError" class="col-md-8">
+              <div class="alert alert-danger"  jhiTranslate="login.messages.error.authentication">
+                  <strong>Failed to sign in!</strong> Please check your credentials and try again.
+              </div>
+          </div>
+
+            <div class="app-loginbody">
+              <form role="form" [formGroup]="loginForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" formControlName="username" #username class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input formControlName="password" type="password" class="form-control"  placeholder="Password" name="password" id="password">
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="form-group form-check m-0">
+                    <input type="checkbox" class="form-check-input" name="rememberMe" id="rememberMe" formControlName="rememberMe">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <a href="" (click)="requestResetPassword()" jhiTranslate="login.password.forgot" class="app-link">Reset password</a>
+                </div>
+              </form>
+            </div>
+            <div class="app-loginfooter">
+              <button type="submit" (click)="login()"  class="btn btn-primary btn-block">Submit</button>
+              <p class="app-p m-0" jhiTranslate="global.messages.info.register.noaccount">Don't have an account yet? <a href="" (click)="register()" jhiTranslate="global.messages.info.register.link" class="app-link">Join visuavid</a></p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,261 @@
+<section class="app-section app-pricing">
+    <div class="container-fluid">
+      <div class=" text-center app-section__heading">
+        <h2 class="app-h2 text-primary text-bold">Find The Right Plan</h2>
+        <p class="app-p">Simple and Flexible pricing options for freelancers
+          and design teams.</p>
+      </div>
+      <div class="app-tablewrap">
+        <table class="app-table--default box-shadow">
+          <thead>
+            <tr>
+              <th class="bg-primary"></th>
+              <th *ngFor="let plan of plans">
+                <h3 class="app-h3 text-dark">{{plan.name}}</h3>
+                <h2 class="app-h2 text-primary text-bold">$99</h2>
+                <p class="app-sm-text m-0">per month</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr >
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Video downloads</p>
+              </td>
+              <td *ngFor="let plan of plans">
+                <p class="app-p m-0">{{plan.downloads}}</p>
+              </td>
+             
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Revisions</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">unlimited</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Cancellation at any time</p>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Chat support</p>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Order Limit per day</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">3</p>
+              </td>
+              <td>
+                <p class="app-p m-0">5</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Advanced customization</p>
+              </td>
+              <td>
+                <p class="app-p m-0"></p>
+              </td>
+              <td>
+                <p class="app-p m-0"></p>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="bg-primary">
+                <p class="app-p text-white m-0">Premium delivery </p>
+              </td>
+              <td>
+                <p class="app-p m-0"></p>
+              </td>
+              <td>
+                <p class="app-p m-0"></p>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+              <td>
+                <span class="app-icon icon-tick"></span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td class="bg-primary"></td>
+            <td *ngFor="let plan of plans">
+              <button class="btn btn-primary" (click)="buyNow(plan)">Choose plan</button>
+            </td>
+          </tfoot>
+        </table>
+      </div>
+     
+    </div>
+   
+  </section>
+
+
+
+  <section class="app-section bg-white">
+    <div class="container-fluid">
+      <div class="text-center app-section__heading">
+        <h2 class="app-h2 text-primary text-bold">Subscriber benefits</h2>
+      </div>
+
+      <div class="app-cardlist app-cardlist--v3">
+       
+        <div class="app-card app-card--no-style">
+          <div class="img-block">
+            <img src="../../content/images/save your time & money.svg" alt="">
+          </div>
+          <div class="app-content">
+            <h6 class="app-h6 text-bold text-black">Save more money & time</h6>
+            <p class="app-sm-text">Get your videos done
+              with faster turn around time
+              for a fraction of price</p>
+          </div>
+        </div>
+        <div class="app-card app-card--no-style">
+          <div class="img-block">
+            <img src="../../content/images/Free for commercial use.svg" alt="">
+          </div>
+          <div class="app-content">
+            <h6 class="app-h6 text-bold text-black">Free for commercial use</h6>
+            <p class="app-sm-text">Once you get a videos from us.
+              you can use it any purpose
+              even for commercial or broadcast</p>
+          </div>
+        </div>
+        <div class="app-card app-card--no-style">
+          <div class="img-block">
+            <img src="../../content/images/Secured payments.svg" alt="">
+          </div>
+          <div class="app-content">
+            <h6 class="app-h6 text-bold text-black">Secured payments</h6>
+            <p class="app-sm-text">Make your payments securely
+              Through PCI DSS Level 1 compliant
+              payment gateway
+              </p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="app-section">
+    <div class="container">
+      <div class="text-center app-section__heading">
+        <h2 class="app-h2 text-dark">Frequently Asked Questions</h2>
+      </div>
+      <div class="app-centerblock">
+        <div class="row app-faqbtm">
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">What is visualvid, why I choose subscription ?</h5>
+            <p class="app-sm-text">Visualvid is an on-demand video service platform. you can
+              either purchase directly or opt in for subscription. subscription
+              allows you save more money</p>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">can I use visualvid videos for commercial use ?</h5>
+            <p class="app-sm-text">Yes. all the videos that from visualvid are cleared for commercial and even for Broadcast use. </p>
+          </div>
+        </div>
+        <div class="row app-faqbtm">
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">how does the visualvid licenses work ?</h5>
+            <p class="app-sm-text">you can use our assets either as part of your personal project
+              or for client commercial work. Do anything you want with
+              it. But you are not allowed to resell or redistribute as your own.</p>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">can I cancel subscription at any time ?</h5>
+            <p class="app-sm-text">yes. If you are not satisfied with our service you can cancel
+              subscription any time </p>
+          </div>
+        </div>
+        <div class="row app-faqbtm">
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">Can I Get project files instead of final video ?</h5>
+            <p class="app-sm-text">some of the Projects are exclusive for visualvid only. some of the project files are not available to download and some are
+              available. you can check the availability in project description.
+              but you either get either project files are final video not both
+              when project files are available to download.</p>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">what is the turnaround time for videos ?</h5>
+            <p class="app-sm-text">Turnaround time will be vary from one video to another.
+              some of the project takes more time to edit and render </p>
+          </div>
+        </div>
+        <div class="row app-faqbtm">
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">What is Premium delivery ?</h5>
+            <p class="app-sm-text">Premium delivery option is fast and priority based delivery
+              service. if you need video urgently you can select premium
+              delivery option before you order. subscribed users can contact
+              us for this option.</p>
+          </div>
+          <div class="col-sm-6">
+            <h5 class="app-h5 text-dark">what is the Advanced customization ?</h5>
+            <p class="app-sm-text">If you need small changes to videos we will gladly do that.
+              if you like the design but your requirement is different. yeah
+              we will do that for you if you opt for pro and enterprise user.
+              </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>

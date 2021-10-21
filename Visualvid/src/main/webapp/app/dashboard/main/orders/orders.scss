@@ -1,0 +1,92 @@
+.text-box {
+  height: 5rem;
+  font-size: x-small;
+  background-color: #fff;
+}
+.btn-new {
+  background-color: #ff6b69;
+  height: 1.5rem;
+  font-size: small;
+  padding-bottom: 1.4rem;
+  color: #fff;
+}
+.order-menu-bar {
+  font-size: small;
+}
+.order-menu-label {
+  font-weight: bold;
+}
+.order-row {
+  background-color: #fff;
+  height: 3rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  /* padding: 0.375rem 0.75rem; */
+  font-size: x-small;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.15rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 5rem;
+  height: 1.8rem;
+  color: #7175d8;
+  font-weight: bold;
+}
+.card-box {
+  height: 5rem;
+  max-width: 22%;
+  margin-right: rem;
+  margin-right: 1rem;
+  font-size: x-small;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+}
+.card-box-metrics {
+  padding-top: 0.5rem;
+  font-size: x-large;
+  font-weight: bold;
+  color: #7175d8;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+:host ::ng-deep .mat-checkbox-inner-container {
+  position: relative !important;
+}
+:host ::ng-deep .mat-checkbox-input.cdk-visually-hidden {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+}
+:host ::ng-deep .mat-checkbox-checkmark-path {
+  stroke: #7175d8;
+}
+::ng-deep .mat-select-panel {
+  background-color: #fff !important;
+  border: 1px solid #b3b3b3 !important;
+}
+::ng-deep .mat-select-panel .mat-optgroup-label,
+::ng-deep .mat-select-panel .mat-option {
+  border-bottom: 1px solid #b3b3b3 !important;
+}
+:host ::ng-deep .mat-table {
+  max-height: calc(100vh - 260px) !important;
+}

@@ -1,0 +1,135 @@
+.app {
+  &-bulletlist {
+    li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      &::before {
+        content: '\e903';
+        font-family: 'icomoon' !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 8px;
+        font-weight: 600;
+      }
+    }
+    &.dangericon {
+      li {
+        &::before {
+          color: $app-danger;
+        }
+      }
+    }
+  }
+  &-list {
+    &__label {
+      color: $app-secondary-font;
+    }
+  }
+  &-linklist {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    li {
+      margin-right: 10px;
+      padding-right: 15px;
+      position: relative;
+      a {
+        font-size: 14px;
+      }
+      &::after {
+        content: '/';
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        color: $app-danger;
+      }
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  &-tag {
+    border: 1px solid $app-border-color;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  &-taglist {
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: 10px;
+    }
+  }
+  &-borderbox {
+    border: 2px solid $app-black;
+    display: inline-flex;
+    align-items: center;
+    li {
+      padding: 10px;
+      text-align: center;
+      border-right: 2px solid $app-black;
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+  &-timeline {
+    li {
+      position: relative;
+      padding-bottom: 15px;
+      padding-left: 25px;
+      font-size: 12px;
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 1px;
+        height: 100%;
+        border-left: 1px solid $app-danger;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 0;
+        top: 5px;
+        border-radius: 100px;
+        background-color: $app-danger;
+      }
+    }
+  }
+  &-textblock {
+    margin: 20px 0 40px 0;
+  }
+  &-pricelist {
+    margin: 0;
+    padding-bottom: 20px;
+    li {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

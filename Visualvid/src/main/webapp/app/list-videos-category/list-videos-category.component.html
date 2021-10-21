@@ -1,0 +1,60 @@
+
+    <main class="app-main app-default-top">
+        <section class="app-main__cards">
+            <div class="container" >
+                <div class="text-right">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-default" (click)="orderByDate()">Latest</button>
+                        <button type="button" class="btn btn-default" (click)="orderByPopular()">Popular</button>
+                      </div>
+                </div>
+                <div class="app-main-wrapper">
+                    <div class="app-filterlist">
+                        <p class="app-p fw-600">Filter Results</p>
+                            <mat-accordion>
+                                <mat-expansion-panel *ngFor="let category of categories">
+                                    <mat-expansion-panel-header (click)="filterByCategories(category.id)">
+                                    {{category.name}}
+                                    </mat-expansion-panel-header>
+                                    <mat-action-row *ngFor="let subCategory of category.subCategories">
+                                       <div (click)="filterBySubCategories(subCategory.id)">{{subCategory.name}}</div>
+                                    </mat-action-row>   
+                            </mat-expansion-panel>
+                            
+                            </mat-accordion>
+                        <!--  -->
+                    </div>
+                    <div class="app-videolist">
+                        <div *ngFor="let item of list" class="app-card app-card--video-sm box-shadow">
+                            <jhi-list-videos-item [item]="item"></jhi-list-videos-item> 
+                            <div class="app-content">
+                                <div class="flex-fill">
+                                    <p class="app-sm-text text-truncate m-cursor" (dblclick)="onVideoItemDoubleClick(item)">{{item.name}}</p>
+                                    <span class="app-sm-text">
+                                        <div class="price">${{item.indianPrice}}</div>
+                                    </span>
+                                </div>
+                                <div class="app-iconbox">
+                                    <!-- <span class="app-icon icon-download m-pointer"></span> -->
+                                    <!-- <svg-icon name="fav" [svgStyle]="{ 'width.px':'25','color':'#FF6B69' }"></svg-icon> -->
+                                    <svg-icon name="cart" [svgStyle]="{ 'width.px':'25','color':'#5ECBA1' }" (click)="addToCart(item)"></svg-icon>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="search-hero">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Outline form field</mat-label>
+                            <input matInput [(ngModel)]="searchText" placeholder="Placeholder">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                          </mat-form-field> 
+                      </div>
+                      <button type="button" class="btn btn-light" (click)="searchFilter()">Search</button> -->
+
+
+                    <mat-paginator [pageSize]="60"></mat-paginator>
+                </div>
+            </div>
+        </section>
+    </main>

@@ -1,0 +1,146 @@
+//  base import
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import 'fonts';
+/**
+ * Basic typography style for copy text
+ */
+body,
+html {
+  line-height: 19px;
+  color: $app-default-font;
+  font-family: Poppins-Regular;
+  font-size: $app-p;
+}
+
+.app {
+  &-h1 {
+    font-size: $app-h1;
+  }
+  &-h2 {
+    font-size: $app-h2;
+  }
+  &-h3 {
+    font-size: $app-h3;
+  }
+  &-h4 {
+    font-size: $app-h4;
+  }
+  &-h5 {
+    font-size: $app-h5;
+  }
+  &-h6 {
+    font-size: $app-h6;
+  }
+  &-p {
+    font-size: $app-p;
+  }
+  &-sm {
+    &-text {
+      font-size: $app-sm-text;
+    }
+  }
+  &-xs {
+    &-text {
+      font-size: $app-sm-text - 2;
+    }
+  }
+  &-bg {
+    background: rgb(67, 73, 123);
+    background: linear-gradient(90deg, rgba(67, 73, 123, 1) 0%, rgba(113, 117, 216, 1) 50%, rgba(67, 77, 123, 1) 100%);
+  }
+
+  &-circle,
+  &-square {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border: 1px solid $app-border-color;
+    flex-shrink: 0;
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &-square {
+    border-radius: 4px;
+    &.active,
+    &.inactive {
+      &:before {
+        top: -4px;
+        right: -4px;
+      }
+    }
+    &--sm {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &-text {
+    &--danger {
+      color: $app-danger;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    &-h1 {
+      font-size: $app-h1 / 2;
+    }
+    &-h2 {
+      font-size: $app-h2 / 2;
+    }
+  }
+}
+
+.text {
+  &-lightgrey {
+    color: $app-lightgrey !important;
+  }
+  &-primary {
+    color: $app-primary-font !important;
+  }
+  &-secondary {
+    color: $app-secondary-font !important;
+  }
+  &-red {
+    color: $app-red !important;
+  }
+  &-black {
+    color: $app-black !important;
+  }
+  &-success {
+    color: $app-success !important;
+  }
+  &-bold {
+    font-family: Poppins-SemiBold;
+  }
+  &-light {
+    font-family: Poppins-Light;
+  }
+}
+
+a {
+  transition: all 0.3s ease-in;
+  text-decoration: none !important;
+  &:focus {
+    text-decoration: none !important;
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba($app-secondary-font, 0.5);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $app-secondary-font;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $app-secondary-font;
+}

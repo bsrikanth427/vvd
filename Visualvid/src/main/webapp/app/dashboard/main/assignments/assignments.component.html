@@ -1,0 +1,165 @@
+<!-- <div>
+    <div class="mt-4">
+       <h5 style="font-weight: bold;">Assignments</h5>
+    </div>
+    <div class="row ml-1 mt-4">
+        <div class="col-3 card card-box">
+            <div>Total Assignments</div>
+            <div class="card-box-metrics">1200</div>
+        </div>
+        <div class="col-3 card card-box">
+            <div>Completed</div>
+            <div class="card-box-metrics">580</div>
+        </div>
+        <div class="col-3 card card-box">
+            <div>In Progress</div>
+            <div class="card-box-metrics">390</div>
+        </div>
+        <div class="col-3 card card-box">
+            <div>Not Completed</div>
+            <div class="card-box-metrics">30</div>
+        </div>
+    </div>
+    <div class="row mt-4 order-menu-bar">
+         <div class="col-1 ml-n4">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="cb1" name="cb1">
+            </div>
+         </div>
+        <div class="col-1"><small>Id#</small></div>
+         <div class="col-1"><small style="font-weight: bold;">OrderId</small></div>
+         <div class="col-2 ml-4"><small style="font-weight: bold;">Name</small></div>
+         <div class="col-2 ml-4"> <small style="font-weight: bold;">AssignTo</small></div>
+         <div class="col-1 ml-4"><small style="font-weight: bold;">Status</small></div>
+         <div class="col-1 ml-4"><small style="font-weight: bold;">TimeLeft</small></div>  
+         <div class="col-1 ml-4"><small style="font-weight: bold;">Action</small></div>  
+    </div>
+
+    <div *ngFor="let assig of assignments">
+        <div class="row mt-1 order-menu-bar order-row">
+            <div class="col-1 ml-n4 mt-2">
+               <div class="custom-control custom-checkbox">
+                   <input type="checkbox" id="cb1" name="cb1">
+               </div>
+            </div>
+           <div class="col-1 mt-2"><small>{{vd.id}}</small></div>
+            <div class="col-1 mt-2"><small>{{assig.orderId}}</small></div>
+            <div class="col-2 ml-4 mt-2"><small>{{assig.name}}</small></div>
+            <div class="col-2 ml-4 mt-2"> <small>{{assig.assignTo}}</small></div>
+            <div class="col-1 ml-4 mt-2"><small>{{assig.status}}</small></div>
+            <div class="col-1 ml-4 mt-2"><small>{{assig.timeLeft}}</small></div>  
+            <div class="col-1 ml-4 mt-2">
+                <select class="form-control" id="sel1">
+                    <option>Design Team</option>
+                    <option>Marketing Team</option>
+                    <option>FInance Team</option>
+                    <option>HR Team</option>
+                  </select>
+             </div> 
+       </div>
+    </div>
+</div> -->
+
+<!-- =================================================================================== -->
+
+
+
+<div class="app-admin__main">
+    <p class="d-flex"><span class="text-secondary text-light mr-2">Hi There,</span> <span class="app-h3">Bobba Anil Kumar</span></p>
+    <div class="app-admin__title">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="app-admin__titleicon text-bold">
+                    <span class="app-icon icon-assignments"></span>
+                    <span>Assignments</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="app-search">
+                    <a class="" href="#"><span class="app-icon icon-search"></span></a>
+                    <input type="text" class="form-control" name="" id="" placeholder="Search...">
+                    
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-cardlist app-cardlist--admin">
+        <div class="app-card active">
+            <p>Total Assignments</p>
+            <p class="app-number">1200</p>
+        </div>
+        <div class="app-card">
+            <p>Completed</p>
+            <p class="app-number">1200</p>
+        </div>
+        <div class="app-card">
+            <p>In Progress</p>
+            <p class="app-number">1200</p>
+        </div>
+        <div class="app-card">
+            <p>Not Completed</p>
+            <p class="app-number">1200</p>
+        </div>
+    </div>
+    <div class="app-tablewrap">
+        <div class="app-tableheader">
+            <table class="app-table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                    </th>
+                    <th scope="col">OrderId</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">AssignTo</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">TimeLeft</th>
+                    <th scope="col">Action</th>
+
+                  </tr>
+                </thead>
+              </table>
+        </div>
+        <div class="app-tablebody">
+            <table class="app-table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"></label>
+                          </div>
+                    </th>
+                    <th scope="col">OrderId</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">AssignTo</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">TimeLeft</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let assig of assignments">
+                    <td>{{assig.orderId}}</td>
+                    <td>{{assig.name}}</td>
+                    <td>{{assig.assignTo}}</td>
+                    <td>{{assig.status}}</td>
+                    <td>{{assig.timeLeft}}</td>
+                    <td>
+                        <select class="form-control" id="sel1">
+                            <option>Design Team</option>
+                            <option>Marketing Team</option>
+                            <option>FInance Team</option>
+                            <option>HR Team</option>
+                          </select>
+                    </td> 
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        
+    </div>
+</div>

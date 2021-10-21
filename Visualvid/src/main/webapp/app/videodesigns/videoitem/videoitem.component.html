@@ -1,0 +1,8 @@
+<div class="app-video" *ngIf="item">
+    <video id="{{item.id}}" class="player12345" playsinline controls data-poster="{{item.thumbNailS3Url}}">
+        <source src="{{item.previewVideoS3Url}}" type="video/mp4">
+        <!-- <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p> -->
+    </video>
+    <span class="app-icon icon-passion app-favourite" (click)="addFaviouritMedia(item);"></span>
+</div>
+

@@ -1,0 +1,89 @@
+.app-pricing {
+  padding-top: 135px;
+}
+.app-faqbtm {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .app-faqbtm {
+    margin-bottom: 0;
+  }
+}
+.app-centerblock {
+  width: 85%;
+  margin: 0 auto;
+}
+.app-loginwrap {
+  height: 100%;
+  display: flex;
+}
+.app-logintext {
+  flex: 1 1 auto;
+  padding: 40px;
+  color: #fff;
+}
+.app-logintext .app-p {
+  margin-top: 10px;
+}
+.app-loginblock {
+  width: 45%;
+  background: #fff;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  overflow: auto;
+}
+.app-loginblock--lg {
+  width: 60%;
+}
+.app-loginblock--lg .app-loginfooter {
+  text-align: left !important;
+}
+.app-loginblock .app-section__heading {
+  margin-bottom: 40px;
+}
+.app-loginfooter {
+  text-align: center;
+  margin-top: 15px;
+}
+.app-loginfooter .btn {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .app-loginwrap {
+    display: block;
+  }
+  .app-logintext {
+    padding: 15px;
+    position: relative;
+    height: 150px;
+  }
+  .app-logintext .app-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .app-loginblock {
+    width: 100%;
+    display: block;
+    height: calc(100vh - 150px);
+  }
+  .app-loginblock--lg {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .app-logintext .app-icon {
+    display: none;
+  }
+}
+
+.bg-primary {
+  background-color: #7175d8 !important;
+}
+
+.icon-tick:before {
+  content: '\e916';
+}

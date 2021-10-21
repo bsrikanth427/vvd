@@ -1,0 +1,19 @@
+{
+  "plugins": ["@typescript-eslint/tslint"],
+  "extends": ["jhipster"],
+  "parserOptions": {
+    "project": "./tsconfig.base.json"
+  },
+  "rules": {
+    "no-console": "off",
+    "camelcase": ["error", { "allow": ["order_id", "id_token"] }],
+    "@typescript-eslint/tslint/config": [
+      "error",
+      {
+        "lintFile": "./tslint.json"
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": 0
+  }
+}

@@ -1,0 +1,105 @@
+<!-- <div>
+    <div class="row">
+       <div class="col">
+             <small style="color: #7175d8; font-weight: bold;">Add New Employee</small>
+       </div>
+    </div>
+     <div class="alert alert-success" *ngIf="success">
+        <small style="color:green; font-weight: bold;">Employee Added Successfully!!</small>
+     </div> -->
+
+    <!-- <div class="row mt-4">
+        <div class="col">
+            <input matInput [(ngModel)]="employee.firstName" class="form-control text-box" placeholder="Name">
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <input matInput [(ngModel)]="employee.lastName" class="form-control text-box" placeholder="Last Name">
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <input matInput [(ngModel)]="employee.email"  class="form-control text-box" placeholder="Email id">
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <input  matInput [(ngModel)]="employee.phone" class="form-control text-box" placeholder="Phone no.">
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <select  matInput [(ngModel)]="employee.role" class="form-control" id="role">
+                <option>Design Team</option>
+                <option>Marketing Team</option>
+                <option>FInance Team</option>
+                <option>HR Team</option>
+            </select>
+        </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <textarea matInput [(ngModel)]="employee.address" class="form-control" placeholder="Address" style="height: 4rem;"></textarea>       
+          </div>
+     </div>
+     <div class="row mt-3">
+        <div class="col">
+            <a class="btn btn-primary" style="background-color: #7175d8; width: 16rem;" (click)=saveEmployee()>
+                <span style="font-size: x-small; color: white;">Add Employee</span>
+            </a>       
+        </div>
+     </div> -->
+
+<!-- </div> -->
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span class="app-icon icon-close"></span>
+        </button>
+        <div class="alert alert-success" *ngIf="success">
+            <small style="color:green; font-weight: bold;">Employee Added Successfully!!</small>
+         </div>
+    </div>
+    <div class="modal-body">
+    <p class="text-primary">Add New Employee</p>
+
+            <form>
+                <div class="form-group">
+                    <input matInput [(ngModel)]="employee.firstName" class="form-control" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <input matInput [(ngModel)]="employee.lastName" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+                  </div>
+                <div class="form-group">
+                  <input matInput [(ngModel)]="employee.email" class="form-control"  aria-describedby="emailHelp" placeholder="Email Id">
+                </div>
+                <div class="form-group">
+                    <input matInput [(ngModel)]="employee.phone" class="form-control" id="exampleInputPassword1" placeholder="Phone No">
+                </div>
+                <div class="form-group">
+                    <select  matInput [(ngModel)]="employee.role" class="form-control" id="role">
+                        <option>Design Team</option>
+                        <option>Marketing Team</option>
+                        <option>FInance Team</option>
+                        <option>HR Team</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea matInput [(ngModel)]="employee.address" class="form-control textarea" id="exampleFormControlTextarea1" rows="5" placeholder="Address"></textarea>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="app-upload">
+                        <p>Employee Image</p>
+                        <div class="app-upload-zone">
+                            <input type="file" name="" id="">
+                            <span class="app-icon icon-plus"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-link" (click)=saveEmployee()>Add Empoloyee</button>
+                </div>
+            </form>
+        </div>
+    </div>

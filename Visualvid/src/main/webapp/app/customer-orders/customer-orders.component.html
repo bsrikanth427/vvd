@@ -1,0 +1,69 @@
+<div fxLayout="row wrap" [@animate]="{value:'*',params:{delay:'800ms',scale:'.9'}}">
+    <div fxFlex="100" fxFlex.gt-sm="66.6" fxFlex.sm="66.6">
+      <mat-card class="p-0 ">
+        <div class="card-title">
+          <h4 class="fw-500">Orders</h4>
+        </div>
+  
+        <div class="table-wrap fix">
+          <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 w-100 border-shadow-0">
+  
+            <!-- Position Column -->
+            <ng-container matColumnDef="orderId">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Order No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
+            </ng-container>
+  
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Order Name</th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+  
+            <!-- Weight Column -->
+            <ng-container matColumnDef="totalCost">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> totalCost </th>
+              <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+            </ng-container>
+  
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}}</td>
+            </ng-container>
+  
+            <!-- Symbol Column -->
+            <!-- <ng-container matColumnDef="paymentDate">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> paymentDate </th>
+              <td mat-cell *matCellDef="let element">{{element.paymentDate | date}}
+              </td>
+            </ng-container> -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> status </th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-chip [color]="element.color" selected>{{element.orderStatus}}  </mat-chip>
+                </td>
+              </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+  
+      </mat-card>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

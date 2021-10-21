@@ -1,0 +1,145 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+  height: 35px;
+  border-radius: 4px;
+  font-size: $app-h5;
+  color: $app-white;
+  border-width: 0;
+  padding: 5px 20px;
+  position: relative;
+  @include mq(tablet, max) {
+    font-size: $app-sm-text;
+  }
+  @media only screen and (max-width: 991px) {
+    height: 30px;
+    padding: 5px 10px;
+  }
+  &:focus {
+    box-shadow: unset;
+    outline: none;
+  }
+  &-rounded {
+    border-radius: 50px;
+    &.icon {
+      padding-right: 50px;
+      .app-icon {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &-sm {
+    height: 30px;
+    font-size: $app-sm-text;
+    padding: 3px 15px;
+    line-height: 10px;
+  }
+  &-md {
+    height: 45px;
+    font-size: $app-h4;
+    @media only screen and (max-width: 991px) {
+      height: 40px;
+    }
+  }
+  &-block {
+    display: block;
+  }
+  &-primary {
+    background-color: $app-primary;
+    &:hover,
+    &:focus {
+      background-color: rgba($app-primary, 1);
+    }
+  }
+  &-secondary {
+    background-color: $app-secondary;
+  }
+  &-danger {
+    background-color: $app-red;
+  }
+  &-default {
+    color: $app-primary-font;
+  }
+  &-call {
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    .app {
+      &-icon {
+        @include absoluteposition(both);
+      }
+    }
+  }
+  &-outline {
+    background-color: transparent;
+    border: 1px solid $app-border-color;
+    &--default {
+      background-color: $app-white;
+      color: $app-primary-font;
+    }
+    &--primary {
+      border-color: $app-primary;
+      color: $app-primary;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &-link {
+    color: $app-primary-font;
+    font-weight: 600;
+    padding: 0 10px;
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: none !important;
+      color: $app-primary-font;
+    }
+  }
+  &-img {
+    padding-left: 50px;
+    img {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 33px;
+    }
+    &.btn-md {
+      padding-left: 60px;
+      img {
+        width: 44px;
+      }
+    }
+    @media only screen and (max-width: 991px) {
+      &.btn-md {
+        padding-left: 50px;
+        img {
+          width: 39px;
+        }
+      }
+    }
+  }
+  &-group {
+    margin: 30px 0;
+    border: 1px solid $app-dark-grey;
+    border-radius: 4px;
+    .btn {
+      border-right: 1px solid $app-dark-grey;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+      margin-left: 0 !important;
+    }
+  }
+}
